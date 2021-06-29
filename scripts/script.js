@@ -22,11 +22,9 @@ let timeInterval;
 function timing() {
     clearInterval(timeInterval);
 
-    setTimeout(() => {
-        timeInterval = setInterval(() => {
-            horizontalMove(1, false);
-        }, 5000);
-    }, 3000);
+    timeInterval = setInterval(() => {
+        horizontalMove(1, false);
+    }, 5000);
 }
 
 function horizontalMove(direction, resetTiming) {
@@ -46,7 +44,7 @@ function horizontalMove(direction, resetTiming) {
 
 function move(element, where, resetTiming) {
     element.style.transform = 'translateX(' + where + 'px)';
-    resetTiming === undefined && timing();
+    resetTiming === undefined && setTimeout(() => { timing() }, 3000);
 }
 
 // bullets
