@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
     loadHorizonatalMove();
     timing();
     makeBullets();
-    document.querySelector('div.slider').addEventListener('touchstart', handleTouchStart, false);
-    document.querySelector('div.slider').addEventListener('touchmove', handleTouchMove, false);
+    document.querySelector('div.slider').addEventListener('touchstart', handleTouchStart);
+    document.querySelector('div.slider').addEventListener('touchmove', handleTouchMove);
     window.onscroll = asideTurnOff;
 });
 
@@ -96,7 +96,7 @@ function handleTouchMove(evt) {
         return;
     }
 
-    (xDown - evt.touches[0].clientX) > 0 ? horizontalMove(1) : horizontalMove(0);
+    (xDown - evt.touches[0].clientX) > 8 ? horizontalMove(1) : horizontalMove(0);
     xDown = null;
 };
 
