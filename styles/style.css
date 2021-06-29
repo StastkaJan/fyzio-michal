@@ -1,0 +1,116 @@
+:root {
+    --prim-col: #f0f0f0;
+    --sec-col: #212121;
+    --ter-col: #ccc;
+}
+
+main>section:first-of-type>div:first-of-type>h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+main>section:first-of-type>div:first-of-type>div {
+    display: flex;
+    justify-content: center;
+}
+
+main>section:first-of-type>div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>section:first-of-type>div:nth-of-type(2)>div {
+    display: flex;
+    position: relative;
+}
+
+main>section:first-of-type>div>div>button {
+    align-self: center;
+    padding: 20px 10px;
+    transform: translateY(50%);
+}
+
+main>section:first-of-type>div>div>button>span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: solid 2px var(--sec-col);
+    transform: rotate(45deg);
+}
+
+main>section:first-of-type>div>div>button:first-of-type>span {
+    border-top: none;
+    border-right: none;
+}
+
+main>section:first-of-type>div>div>button:last-of-type>span {
+    border-left: none;
+    border-bottom: none;
+}
+
+main div.sliderParent {
+    display: flex;
+    justify-content: flex-start;
+    width: 250px;
+    overflow-x: hidden;
+}
+
+main div.sliderParent>div.slider {
+    display: flex;
+    transition: .2s ease-in-out;
+}
+
+main div.sliderParent>div.slider>div {
+    padding: 10px;
+    width: 230px;
+    flex-shrink: 0;
+}
+
+main div.bullets {
+    display: flex;
+}
+
+main div.bullets>span {
+    margin: 3px 7px;
+    width: 7px;
+    height: 7px;
+    border: solid 2px var(--sec-col);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+main div.bullets>span.active {
+    background: var(--sec-col);
+}
+
+aside {
+    padding: 10px;
+    background: var(--prim-col);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    filter: drop-shadow(0 0 10px var(--ter-col));
+    z-index: 100;
+    transition: .2s;
+}
+
+aside>a {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside>a>svg {
+    padding: 5px;
+    height: 20px;
+}
+
+aside>a>span {
+    font-size: .9rem;
+}
