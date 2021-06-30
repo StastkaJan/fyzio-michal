@@ -30,6 +30,7 @@ html {
 body {
     background: var(--prim-col);
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1,

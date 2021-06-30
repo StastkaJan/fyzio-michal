@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('div.slider').addEventListener('touchstart', handleTouchStart);
     document.querySelector('div.slider').addEventListener('touchmove', handleTouchMove);
     window.onscroll = asideTurnOff;
+    document.querySelector('header > button.menu').onclick = menuClick;
 });
 
 // horizontal scroll
@@ -102,13 +103,20 @@ function handleTouchMove(evt) {
 
 // aside turn off
 function asideTurnOff() {
-    let aside = document.querySelector('aside');
+    let aside = document.querySelector('body > aside');
     let contact = document.getElementById('kontakt');
 
-    if (window.scrollY > contact.offsetTop - window.innerHeight + 100) {
+    if (window.scrollY > contact.offsetTop - window.innerHeight + 100 && document.querySelector('body > nav').classList[0] != 'show') {
         aside.style.visibility = 'hidden';
     }
     else {
         aside.style.visibility = 'unset';
     }
+}
+
+// menu click
+function menuClick() {
+    document.querySelector('body > nav').classList.toggle('show');
+    document.body.classList.toggle('fixed');
+    asideTurnOff();
 }
