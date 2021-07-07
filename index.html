@@ -13,7 +13,7 @@
     <link rel="mask-icon" href="/icon.svg">
 
     <link rel="stylesheet" href="styles/normalize-min.css">
-    <link rel="stylesheet" href="styles/basic.css">
+    <link rel="stylesheet" href="styles/basic-min.css">
     <link rel="stylesheet" href="styles/style-min.css">
 
     <script src="scripts/script-min.js"></script>
@@ -34,7 +34,16 @@
             <span></span>
             <span></span>
         </button>
+        <nav>
+            <a href="#">nejaky odkaz</a>
+            <a href="#">nejaky odkaz</a>
+            <a href="#">nejaky odkaz</a>
+        </nav>
     </header>
+    <div class="mobileMenu">
+        <button aria-label="Menu Open"><span>menu</span></button>
+        <button aria-label="Menu Close"><span>zavřít</span></button>
+    </div>
     <nav>
         <a href="#">nejaky odkaz</a>
         <a href="#">nejaky odkaz</a>
@@ -44,6 +53,10 @@
         <section>
             <div>
                 <h1>Michal Lipnický</h1>
+                <span>Tady by se hodil nějaký krátký textík.<br>
+                    Asi tak dva řádečky.<br>
+                    Či tři.<br>
+                    nebo čtyři.</span>
                 <div>
                     <a class="button primary" href="/#kontakt">Kontakt</a>
                     <a class="button secondary" href="/#sluzby">Služby</a>
@@ -79,67 +92,80 @@
             </div>
         </section>
         <section>
-            <h2>/ O mně</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis nulla quis nisi porttitor
-                laoreet. Maecenas sem dui, euismod ut consequat vel, commodo ac ante. Proin nec auctor neque. Duis
-                laoreet vestibulum magna sit amet tincidunt.
-            </p>
-            <img src="img/placeholder.jpg" alt="obrázek" loading=lazy>
-            <a class="button secondary" href="/#">Další info</a>
+            <div>
+                <h2>/ O mně</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis nulla quis nisi
+                    porttitor
+                    laoreet. Maecenas sem dui, euismod ut consequat vel, commodo ac ante. Proin nec auctor neque. Duis
+                    laoreet vestibulum magna sit amet tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Phasellus venenatis nulla quis nisi
+                    porttitor
+                    laoreet.
+                </p>
+                <img src="img/placeholder.jpg" alt="obrázek" loading=lazy>
+                <a class="button secondary" href="/#">Další info</a>
+            </div>
         </section>
         <section>
-            <h2>/ Relaxace až do domu</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis nulla quis nisi porttitor
-                laoreet. Maecenas sem dui, euismod ut consequat vel, commodo ac ante. Proin nec auctor neque. Duis
-                laoreet vestibulum magna sit amet tincidunt.
-            </p>
+            <div>
+                <h2>/ Relaxace až do domu</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis nulla quis nisi
+                    porttitor
+                    laoreet. Maecenas sem dui, euismod ut consequat vel, commodo ac ante. Proin nec auctor neque. Duis
+                    laoreet vestibulum magna sit amet tincidunt.
+                </p>
+            </div>
         </section>
         <section id="sluzby">
-            <h2>/ Služby</h2>
-            <p>
-                Ceny jsou bez DPH 21 %.
-            </p>
-            <table>
-                <tr>
-                    <td>Masáž zad</td>
-                    <td>500 Kč</td>
-                </tr>
-                <tr>
-                    <td>Masáž nohou</td>
-                    <td>300 Kč</td>
-                </tr>
-                <tr>
-                    <td>[něco další]</td>
-                    <td>[000] Kč</td>
-                </tr>
-                <tr>
-                    <td>[něco další]</td>
-                    <td>[000] Kč</td>
-                </tr>
-                <tr>
-                    <td>[něco další]</td>
-                    <td>[000] Kč</td>
-                </tr>
-            </table>
-            <a class="button secondary" href="/#">Další služby</a>
+            <div>
+                <h2>/ Služby</h2>
+                <p>
+                    Ceny jsou bez DPH 21 %.
+                </p>
+                <table>
+                    <tr>
+                        <td>Masáž zad</td>
+                        <td>500 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Masáž nohou</td>
+                        <td>300 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>[něco další]</td>
+                        <td>[000] Kč</td>
+                    </tr>
+                    <tr>
+                        <td>[něco další]</td>
+                        <td>[000] Kč</td>
+                    </tr>
+                    <tr>
+                        <td>[něco další]</td>
+                        <td>[000] Kč</td>
+                    </tr>
+                </table>
+                <a class="button secondary" href="/#">Další služby</a>
+            </div>
         </section>
         <section id="kontakt">
-            <h2>/ Kontakt</h2>
-            <p>
-                Tel.: +420 000 000 000<br>
-                E-mail: neco@gmail.com
-            </p>
             <div>
-                <a class="button primary" href="tel:+420000000000">Zavolat</a>
-                <a class="button primary" href="mailto:neco@gmail.com?subject=Dotaz/poptávka">Napsat e-mail</a>
-            </div>
-            <div>
-                <!-- socials -->
-                <span></span>
-                <span></span>
-                <span></span>
+                <h2>/ Kontakt</h2>
+                <p>
+                    Tel.: +420 000 000 000<br>
+                    E-mail: neco@gmail.com
+                </p>
+                <div>
+                    <a class="button primary" href="tel:+420000000000">Zavolat</a>
+                    <a class="button primary" href="mailto:neco@gmail.com?subject=Dotaz/poptávka">Napsat e-mail</a>
+                </div>
+                <div>
+                    <!-- socials -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </section>
     </main>

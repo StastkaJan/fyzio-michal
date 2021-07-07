@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('div.slider').addEventListener('touchmove', handleTouchMove);
     window.onscroll = asideTurnOff;
     document.querySelector('header > button.menu').onclick = menuClick;
+    document.querySelector('div.mobileMenu').onclick = menuClick;
 });
 
 // horizontal scroll
@@ -118,5 +119,8 @@ function asideTurnOff() {
 function menuClick() {
     document.querySelector('body > nav').classList.toggle('show');
     document.body.classList.toggle('fixed');
+
+    document.querySelector('div.mobileMenu').classList.toggle('clicked');
+
     asideTurnOff();
 }

@@ -4,6 +4,10 @@
     --ter-col: #ccc;
 }
 
+main>section:first-of-type {
+    min-height: 60vh;
+}
+
 main>section:first-of-type>div:first-of-type>h1 {
     font-size: 2.5rem;
     text-align: center;
@@ -113,4 +117,65 @@ aside>a>svg {
 
 aside>a>span {
     font-size: .9rem;
+}
+
+div.mobileMenu {
+    position: fixed;
+    top: 55%;
+    right: 0;
+    width: 80px;
+    text-align: center;
+    transform: translateX(50%);
+    transition: .2s;
+    z-index: 300;
+}
+
+div.mobileMenu.clicked {
+    transform: translateX(50%) rotate(180deg);
+}
+
+div.mobileMenu>button {
+    padding: 10px 20px;
+    background: var(--sec-col);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+div.mobileMenu>button:first-of-type {
+    transform: rotate(-90deg) translate(-25%,-50%);
+}
+
+div.mobileMenu>button:last-of-type {
+    transform: rotate(90deg) translate(-25%,-50%);
+}
+
+div.mobileMenu>button>span {
+    color: var(--prim-col);
+}
+
+@media (min-width: 600px) {
+    aside,
+    div.mobileMenu {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    main div.sliderParent {
+        width: 320px;
+    }
+    
+    main div.sliderParent>div.slider>div {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main div.sliderParent {
+        width: 420px;
+    }
+    
+    main div.sliderParent>div.slider>div {
+        width: 400px;
+    }
 }
